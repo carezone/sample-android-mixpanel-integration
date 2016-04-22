@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/peymano/Code/CareZone/mixpanel-android-sample/build/intermediates/exploded-aar/com.github.mixpanel/mixpanel-android/be5acb324f/res/values-v11/values-v11.xml -->
+    <eat-comment/>
+    <style name="com_mixpanel_android_SurveyActivityTheme" parent="android:Theme.Holo">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@style/com_mixpanel_android_SurveyActivityAnimation</item>
+    </style>
+</resources>

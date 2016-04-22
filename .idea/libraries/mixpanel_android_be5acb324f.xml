@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="mixpanel-android-be5acb324f">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/intermediates/exploded-aar/com.github.mixpanel/mixpanel-android/be5acb324f/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/build/intermediates/exploded-aar/com.github.mixpanel/mixpanel-android/be5acb324f/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

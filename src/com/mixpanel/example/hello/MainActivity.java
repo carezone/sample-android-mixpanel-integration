@@ -16,6 +16,8 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.mixpanel.android.mpmetrics.MixpanelAPI;
+import com.mixpanel.android.mpmetrics.OnMixpanelUpdatesReceivedListener;
+import com.mixpanel.android.mpmetrics.Tweak;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -42,7 +44,7 @@ import java.util.Random;
  * @author mixpanel
  *
  */
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements OnMixpanelUpdatesReceivedListener {
 
     /*
      * You will use a Mixpanel API token to allow your app to send data to Mixpanel. To get your token
@@ -54,7 +56,7 @@ public class MainActivity extends Activity {
      *
      *   Paste it below (where you see "YOUR API TOKEN")
      */
-    public static final String MIXPANEL_API_TOKEN = "fa45c697d1c664abb760166578f91f24";
+    public static final String MIXPANEL_API_TOKEN = "1720362b764833008c66e1458584cd14";
 
     /*
      * In order for your app to receive push notifications, you will need to enable
@@ -79,7 +81,17 @@ public class MainActivity extends Activity {
      * declare the permissions and receiver capabilities you'll need to get your push notifications working.
      * You can take a look at this application's AndroidManifest.xml file for an example of what is needed.
      */
-    public static final String ANDROID_PUSH_SENDER_ID = "256980666236";
+    public static final String ANDROID_PUSH_SENDER_ID = "355339962061";
+
+    private static Tweak<String> nameTweak = MixpanelAPI.stringTweak("Name", "none");
+    private static Boolean addedMixpanelListener = false;
+
+    @Override
+    public void onMixpanelUpdatesReceived() {
+        mMixpanel.getPeople().joinExperimentIfAvailable();
+        Log.v("UpdatesReceived", nameTweak.get());
+    }
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -108,6 +120,10 @@ public class MainActivity extends Activity {
 
         mMixpanel.getPeople().initPushHandling(ANDROID_PUSH_SENDER_ID);
 
+        if (addedMixpanelListener == false) {
+            mMixpanel.getPeople().addOnMixpanelUpdatesReceivedListener(this);
+        }
+
         setContentView(R.layout.activity_main);
     }
 
@@ -123,6 +139,8 @@ public class MainActivity extends Activity {
 
         final long nowInHours = hoursSinceEpoch();
         final int hourOfTheDay = hourOfTheDay();
+
+        Log.v("Name Tweak Value = ", nameTweak.get());
 
         // For our simple test app, we're interested tracking
         // when the user views our application.

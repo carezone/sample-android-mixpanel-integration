@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/com_mixpanel_android_arrowleft_states"
+    android:insetBottom="20dp"
+    />
+<!-- From: file:/home/jitpack/build/src/main/res/drawable/com_mixpanel_android_arrowleft_insets.xml --><!-- From: file:/Users/peymano/Code/CareZone/mixpanel-android-sample/build/intermediates/exploded-aar/com.github.mixpanel/mixpanel-android/be5acb324f/res/drawable/com_mixpanel_android_arrowleft_insets.xml -->
