@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/peymano/Code/CareZone/mixpanel-android-sample/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.3.0/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7215ac1f2fca947b9415a6ee2a1bf991364aab24">
+        <dex dex="/Users/peymano/Code/CareZone/mixpanel-android-sample/build/intermediates/pre-dexed/debug/classes-ed32e7fdab90544dc3852348d685de98c098da22.jar" />
+    </item>
+    <item
+        jar="/Users/peymano/Code/CareZone/mixpanel-android-sample/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/Users/peymano/Code/CareZone/mixpanel-android-sample/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-a80cd5c28dc1ee3981546ab51f3f8a5d0164ee0c.jar" />
+    </item>
+    <item
+        jar="/Users/peymano/Code/CareZone/mixpanel-android-sample/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Users/peymano/Code/CareZone/mixpanel-android-sample/build/intermediates/pre-dexed/debug/classes-af886d9c1aa7a4918ec86d2c20ae5ec3675b135e.jar" />
+    </item>
+    <item
+        jar="/Users/peymano/Code/CareZone/mixpanel-android-sample/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.3.0/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f2f7ec211ce4d244ee97a57523eeb4526dc3cf8a">
+        <dex dex="/Users/peymano/Code/CareZone/mixpanel-android-sample/build/intermediates/pre-dexed/debug/classes-18492b8d84fd1e1615dc0f8625264c9e2acffb64.jar" />
+    </item>
+    <item
+        jar="/Users/peymano/Code/CareZone/mixpanel-android-sample/build/intermediates/exploded-aar/com.github.mixpanel/mixpanel-android/be5acb324f/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="bd203e5196b3b6052d37a564c552bf13d93ca3aa">
+        <dex dex="/Users/peymano/Code/CareZone/mixpanel-android-sample/build/intermediates/pre-dexed/debug/classes-bcf676ccd407808c3cdc24df0f3f8350ed977263.jar" />
+    </item>
+    <item
+        jar="/Users/peymano/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/Users/peymano/Code/CareZone/mixpanel-android-sample/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-bb150a30518f9ec0a9e74bebc4e8b7ac970e95e0.jar" />
+    </item>
+
+</items>
