@@ -9,11 +9,14 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Base64;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.mixpanel.android.mpmetrics.MixpanelAPI;
 import com.mixpanel.android.mpmetrics.OnMixpanelUpdatesReceivedListener;
@@ -24,6 +27,7 @@ import org.json.JSONObject;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
@@ -85,11 +89,21 @@ public class MainActivity extends Activity implements OnMixpanelUpdatesReceivedL
 
     private static Tweak<String> nameTweak = MixpanelAPI.stringTweak("Name", "none");
     private static Boolean addedMixpanelListener = false;
+    private TextView mUpdateReceivedAtText;
+    private TextView mTweakValueText;
 
     @Override
     public void onMixpanelUpdatesReceived() {
         mMixpanel.getPeople().joinExperimentIfAvailable();
-        Log.v("UpdatesReceived", nameTweak.get());
+        final String value = nameTweak.get();
+        Log.v("UpdatesReceived", value);
+        new Handler(Looper.getMainLooper()).post(new Runnable() {
+            @Override public void run() {
+                mUpdateReceivedAtText.setText(
+                    SimpleDateFormat.getTimeInstance().format(Calendar.getInstance().getTime()));
+                mTweakValueText.setText(value);
+            }
+        });
     }
 
 
@@ -125,6 +139,9 @@ public class MainActivity extends Activity implements OnMixpanelUpdatesReceivedL
         }
 
         setContentView(R.layout.activity_main);
+
+        mUpdateReceivedAtText = ((TextView) findViewById(R.id.updates_received));
+        mTweakValueText = (TextView) findViewById(R.id.tweak_value);
     }
 
     @Override
@@ -140,7 +157,9 @@ public class MainActivity extends Activity implements OnMixpanelUpdatesReceivedL
         final long nowInHours = hoursSinceEpoch();
         final int hourOfTheDay = hourOfTheDay();
 
-        Log.v("Name Tweak Value = ", nameTweak.get());
+        final String value = nameTweak.get();
+        Log.v("Name Tweak Value = ", value);
+        mTweakValueText.setText(value);
 
         // For our simple test app, we're interested tracking
         // when the user views our application.

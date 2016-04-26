@@ -45,5 +45,41 @@
             android:layout_height="wrap_content"
             android:text="MixpanelApi.reset()"
             android:onClick="clickedReset" />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tweak value = "
+                android:onClick="clickedReset" />
+        <TextView
+                android:id="@+id/tweak_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clickedReset" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="onMixpanelUpdatesReceived() called at "
+                android:onClick="clickedReset" />
+        <TextView
+                android:id="@+id/updates_received"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clickedReset" />
+    </LinearLayout>
 </LinearLayout>
 
