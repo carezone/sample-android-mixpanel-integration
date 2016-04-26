@@ -242,6 +242,11 @@ public class MainActivity extends Activity implements OnMixpanelUpdatesReceivedL
         people.trackCharge(1.50, null);
     }
 
+    public void clickedReset(final View view) {
+        mMixpanel.reset();
+        Log.v("clickedReset", nameTweak.get());
+    }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

@@ -18,8 +18,8 @@ repositories {
 dependencies {
     compile 'com.google.android.gms:play-services-base:7.3.0'
     compile 'com.google.android.gms:play-services-gcm:7.3.0'
-    compile 'com.github.mixpanel:mixpanel-android:be5acb324f'
-// compile "com.mixpanel.android:mixpanel-android:4.8.5"
+//    compile 'com.github.mixpanel:mixpanel-android:be5acb324f'
+    compile "com.mixpanel.android:mixpanel-android:4.8.5"
 }
 
 android {
